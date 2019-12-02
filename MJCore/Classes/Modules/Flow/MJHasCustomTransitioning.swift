@@ -11,7 +11,7 @@ public protocol MJHasCustomTransitioning {
     
     func getCustomTransitioning(
         toVC: UIViewController,
-        operation: UINavigationControllerOperation
+        operation: UINavigationController.Operation
     ) -> UIViewControllerAnimatedTransitioning?
     
 }

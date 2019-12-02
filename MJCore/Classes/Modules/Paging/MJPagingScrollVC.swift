@@ -29,10 +29,10 @@ open class MJPagingScrollVC<
     
     override open func viewDidLoad() {
         super.viewDidLoad()
-        addChildViewController(pagingVC)
+        addChild(pagingVC)
         ui.initView(pagingVC.view)
         view = ui
-        pagingVC.didMove(toParentViewController: self)
+        pagingVC.didMove(toParent: self)
         viewModel.initBindings()
         pagingVC.model.initBindings()
         initBindings()

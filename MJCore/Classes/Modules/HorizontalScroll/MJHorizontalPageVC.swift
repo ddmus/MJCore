@@ -11,7 +11,7 @@ import RxSwift
 public struct MJPageViewChange {
     
     let viewController: UIViewController?
-    let direction: UIPageViewControllerNavigationDirection
+    let direction: UIPageViewController.NavigationDirection
     let animated: Bool
     
     static func error() -> MJPageViewChange {
@@ -29,9 +29,9 @@ public final class MJHorizontalPageVC: UIPageViewController {
     public let model = MJHorizontalPageVM()
     
     override init(
-        transitionStyle style: UIPageViewControllerTransitionStyle,
-        navigationOrientation: UIPageViewControllerNavigationOrientation,
-        options: [String: Any]? = nil
+        transitionStyle style: UIPageViewController.TransitionStyle,
+        navigationOrientation: UIPageViewController.NavigationOrientation,
+        options: [UIPageViewController.OptionsKey: Any]? = nil
     ) {
         super.init(transitionStyle: .scroll, navigationOrientation: .horizontal, options: options)
         initBindings()

@@ -12,7 +12,7 @@ public typealias MJPageViewControllerType = UIViewController & MJPagingViewContr
 public struct MJPagingChange {
     
     let viewController: MJPageViewControllerType?
-    let direction: UIPageViewControllerNavigationDirection
+    let direction: UIPageViewController.NavigationDirection
     let animated: Bool
     
 }
@@ -23,9 +23,9 @@ public final class MJPagingVC<PagingModel: MJPagingModelType>: UIPageViewControl
     public let model = MJPagingViewModel<PagingModel>()
     
     override init(
-        transitionStyle style: UIPageViewControllerTransitionStyle,
-        navigationOrientation: UIPageViewControllerNavigationOrientation,
-        options: [String: Any]? = nil
+        transitionStyle style: UIPageViewController.TransitionStyle,
+        navigationOrientation: UIPageViewController.NavigationOrientation,
+        options: [UIPageViewController.OptionsKey: Any]? = nil
     ) {
         super.init(transitionStyle: .scroll, navigationOrientation: .horizontal, options: options)
         initBindings()

@@ -23,7 +23,7 @@ public final class MJLocalNotificationService<Notification: MJLocalNotifications
                         let content = UNMutableNotificationContent()
                         content.title = notification.title
                         content.body = notification.body
-                        content.sound = UNNotificationSound.default()
+                        content.sound = UNNotificationSound.default
                         
                         let request = UNNotificationRequest(
                             identifier: notification.id,

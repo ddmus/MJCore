@@ -40,7 +40,7 @@ public final class MJBackgroundPoller {
             )
             RunLoop.current.add(
                 self.timer!,
-                forMode: RunLoopMode.defaultRunLoopMode
+                forMode: RunLoop.Mode.default
             )
             RunLoop.current.run()
         }

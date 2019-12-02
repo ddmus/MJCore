@@ -48,12 +48,12 @@ open class MJTableViewLCS<TableModel: MJGroupElementType>
         initSetup()
     }
     
-    public init(style: UITableViewStyle) {
+    public init(style: UITableView.Style) {
         super.init(frame: .zero, style: style)
         initSetup()
     }
     
-    override public init(frame: CGRect, style: UITableViewStyle) {
+    override public init(frame: CGRect, style: UITableView.Style) {
         super.init(frame: frame, style: style)
         initSetup()
     }
@@ -213,14 +213,14 @@ open class MJTableViewLCS<TableModel: MJGroupElementType>
     
     // MARK: animations
     
-    private var reloadAnimation: UITableViewRowAnimation = .fade
-    private var insertAnimation: UITableViewRowAnimation = .fade
-    private var deleteAnimation: UITableViewRowAnimation = .fade
+    private var reloadAnimation: UITableView.RowAnimation = .fade
+    private var insertAnimation: UITableView.RowAnimation = .fade
+    private var deleteAnimation: UITableView.RowAnimation = .fade
     
     public func setAnimations(
-        reload: UITableViewRowAnimation,
-        insert: UITableViewRowAnimation,
-        delete: UITableViewRowAnimation
+        reload: UITableView.RowAnimation,
+        insert: UITableView.RowAnimation,
+        delete: UITableView.RowAnimation
     ) {
         reloadAnimation = reload
         insertAnimation = insert

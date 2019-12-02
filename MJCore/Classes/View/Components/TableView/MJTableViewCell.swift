@@ -14,7 +14,7 @@ open class MJTableViewCell<Model>: UITableViewCell {
     private let disposeBag = DisposeBag()
     public let model: BehaviorRelay<MJTableViewCellModel<Model>?>
     
-    override public init(style: UITableViewCellStyle, reuseIdentifier: String?) {
+    override public init(style: UITableViewCell.CellStyle, reuseIdentifier: String?) {
         model = BehaviorRelay<MJTableViewCellModel<Model>?>(value: nil)
         super.init(style: style, reuseIdentifier: reuseIdentifier)
         initView()

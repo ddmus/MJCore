@@ -48,12 +48,12 @@ open class MJTableView<TableModel>
         initSetup()
     }
     
-    public init(style: UITableViewStyle) {
+    public init(style: UITableView.Style) {
         super.init(frame: .zero, style: style)
         initSetup()
     }
     
-    override public init(frame: CGRect, style: UITableViewStyle) {
+    override public init(frame: CGRect, style: UITableView.Style) {
         super.init(frame: frame, style: style)
         initSetup()
     }
